@@ -1,0 +1,41 @@
+body {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    background-color: #000;
+    border: 4px solid #fff;
+    max-width: 95%; /* Supaya pas dengan layar HP */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Container Tombol */
+.controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Desain Tombol */
+.ctrl-btn {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    touch-action: manipulation; /* Mencegah zoom saat di-double tap */
+    cursor: pointer;
+}
+
+.ctrl-btn:active {
+    background-color: #b30000; /* Warna saat ditekan */
+}
