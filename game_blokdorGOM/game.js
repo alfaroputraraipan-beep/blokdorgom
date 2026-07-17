@@ -229,8 +229,16 @@ function animate() {
 
 animate();
 
+// --- 9. RESIZE LAYAR ---
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-});
+}); // <--- INI DIA KURUNG TUTUP YANG TADI HILANG!
+
+// --- 10. KUNCI LAYAR LANDSCAPE ---
+if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock('landscape').catch(function(error) {
+        console.log("Browser tidak mengizinkan kunci orientasi otomatis.");
+    });
+}
